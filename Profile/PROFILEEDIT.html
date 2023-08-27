@@ -22,8 +22,8 @@
 
     <nav class="navbar navbar-expand-lg navBlog">
         <div class="container d-flex align-items-center">
-            <a class="navbar-brand text-light fw-bold fs-5"href=" #">Personal Blogging App</a>
-            <a class="nav-link fw-bold mt-1" aria-current="page" href="../signUp/signup.html" id="logoutBtn">Logout</a>
+            <a class="navbar-brand text-light fw-bold fs-5" href="../index.html">Personal Blogging App</a>
+            <a class="nav-link fw-bold mt-1" aria-current="page" href="../login.html" id="logoutBtn">Logout</a>
         </div>
     </nav>
 
@@ -34,10 +34,10 @@
     <section class="sizing mt-4">
         <div class="border p-4 mt-2 mb-3 editProfileBgColor" style="border-radius: 10px">
             <img src="../img/dummy-image.jpg" alt="" class="rounded me-3 editProfileImg mb-3"
-                style="width: 250px; height: 250px" id="profilePic">
+                style="width: 250px; height: 250px; margin-left:450px;" id="profilePic">
             <input type="file" accept="image/*" name="photo" id="updateImagefile" style="display: none" onchange="document.getElementById('profilePic').src = window.URL.createObjectURL(this.files[0])">
             <label for="updateImagefile">
-                <i class="fa-solid fa-pen appColor fs-4 badgePosition"></i>
+                <i class="fa-solid fa-pen appColor fs-4 badgePosition" style="margin-left: 490px;"></i>
             </label>
 
             <div class="editFullName d-flex  flex-column gap-3">

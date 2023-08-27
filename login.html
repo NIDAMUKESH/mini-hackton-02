@@ -17,7 +17,7 @@
         </div>
         <ul class="links">
             <li>
-                <a href="./signup.html">SignUp</a>
+                <a href="./signup.html">Sign Up</a>
             </li>
         </ul>
     </header>
@@ -77,6 +77,8 @@
             });
             alert("User Login");
             window.location.href = './Dashboard/Dashboard.html';
+            document.getElementById('email').value = '';
+            document.getElementById('password').value = '';
             // ...
         })
         .catch((error) => {

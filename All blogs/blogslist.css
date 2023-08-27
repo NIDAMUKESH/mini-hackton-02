@@ -4,7 +4,6 @@
     box-sizing: border-box;
 }
 
-
 .appColor {
     color: #a87afd;
 }
@@ -14,12 +13,12 @@
     color: #ffffff;
 }
 
-#logoutBtn {
+#loginBtn {
     color: #ffffff;
     transition: all 0.5s;
 }
 
-#logoutBtn:hover {
+#loginBtn:hover {
     color: #036796;
 }
 
@@ -28,39 +27,28 @@
     padding-right: 40px;
 }
 
-.editProfileBgColor {
+.bgBlogPostColor {
     background-color: #fafaf6;
-    height: 700px;
+}
+.positionScroll {
+    overflow-y: scroll;
+    height: 75vh;
 }
 
-.updatePassword {
+#positionScrollPostArea::-webkit-scrollbar {
+    width: 5px;
+}
+
+#positionScrollPostArea::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background-color: #909090;
+    border: 1px solid #aaaaaa;
+}
+
+#positionScrollPostArea::-webkit-scrollbar-thumb {
+    border-radius: 10px;
     background-color: #a87afd;
-    color: #ffffff;
 }
-
-.badgePosition {
-    position: absolute;
-    left: 276px;
-    top: 395px;
-    cursor: pointer;
-}
-
-.updateProfileBtn {
-    background-color: #a87afd;
-    color: #ffffff;
-    transition: all 0.5s;
-    margin: 200px;
-
-}
-
-.updateProfileBtn:hover {
-    background-color: #ffffff;
-    color: #a87afd;
-    border: 1px solid #036796;
-}
-
-
-
 
 
 
@@ -93,13 +81,10 @@
         padding-right: 10px;
     }
 
-    .badgePosition {
-        position: absolute;
-        left: 250px;
-        top: 390px;
-        cursor: pointer;
+    .row {
+        flex-direction: column-reverse;
     }
-
+    
 }
 
 /* ===>>> Tablet */
