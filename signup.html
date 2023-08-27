@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personal Blogging App</title>
-    <link rel="stylesheet" href="./css/sig-up.css">
+    <link rel="stylesheet" href="./css/sign-up.css">
 </head>
 
 <body>
@@ -43,8 +43,8 @@
 <script type="module">
     // Import the functions you need from the SDKs you need
     import { initializeApp } from "https://www.gstatic.com/firebasejs/10.3.0/firebase-app.js";
-    import { getDatabase } from "https://www.gstatic.com/firebasejs/10.3.0/firebase-database.js";
-    import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.3.0/firebase-auth.js";
+    import { getDatabase,set,ref } from "https://www.gstatic.com/firebasejs/10.3.0/firebase-database.js";
+    import { getAuth, createUserWithEmailAndPassword,signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.3.0/firebase-auth.js";
     import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.3.0/firebase-analytics.js";
     // TODO: Add SDKs for Firebase products that you want to use
     // https://firebase.google.com/docs/web/setup#available-libraries
@@ -80,7 +80,21 @@
         .then((userCredential) => {
             // Signed in 
             const user = userCredential.user;
+            set(ref(database,'users/' + user.uid),{
+                fname : fname,
+                lname : lname,
+                email : email,
+                password : password,
+                
+
+            }
+            )
             alert("User Created");
+            document.getElementById('fname').value = '';
+            document.getElementById('lname').value = '';
+            document.getElementById('email').value = '';
+            document.getElementById('password').value = '';
+            document.getElementById('rpassword').value = '';
             // ...
         })
         .catch((error) => {
